@@ -1,0 +1,80 @@
+
+.floating-background {
+    background-color: rgba(66, 66, 66, 0.4);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.floating-container {
+    background-color: #171717;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10;
+    padding: 2rem;
+    width: 60%;
+    height: fit-content;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.floating-controls {
+    background-color: #171717;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.floating-controls h2 {
+    background-color: transparent;
+}
+
+.floating-close {
+    border-radius: 50px;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    color: #fdfdfd;
+    border: none;
+}
+
+.floating-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.floating-close:after {
+    display: inherit-block;
+    content: '\00d7';
+}
+
+@media (max-width: 639px) {
+    .floating-container {
+        width: 90%;
+        border-radius: 20px;
+    }
+
+    .floating-close {
+        font-size: 36px;
+    }
+}

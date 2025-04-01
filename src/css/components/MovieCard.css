@@ -1,0 +1,187 @@
+.movieCard-container {
+  background-color: transparent;
+}
+
+.movieCard-link {
+  text-decoration: none;
+  color: white;
+}
+
+.movieCard-link:hover {
+  color: inherit;
+}
+
+.movieCard {
+  position: relative;
+  max-width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  height: adjust-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.movieCard:hover {
+  transform: translateY(-5px);
+}
+
+.movieCard-poster {
+  position: relative;
+  aspect-ratio: 2/3;
+  width: 100%;
+}
+
+.movieCard-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movieCard-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.8)
+  );
+  opacity: 0;
+  transition: opacity 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.movieCard:hover .movieCard-overlay {
+  opacity: 1;
+}
+
+.movieCard-favorite-btn {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  color: white;
+  font-size: 1rem;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movieCard-favorite-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.movieCard-info {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.movieCard-title {
+  background-color: transparent;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.movieCard-info p {
+  background-color: transparent;
+  color: #999;
+  font-size: 0.7rem;
+}
+
+.MovieCard-addToList-btn {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+} 
+
+.MovieCard-addToList-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.MovieCard-addToList-btn::after {
+  content: " Add to List";
+}
+
+@media (max-width: 768px) {
+  .movieCard {
+    font-size: 0.8rem;
+    text-align: center;
+    max-width: 120px;
+  }
+  
+  .movieCard-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .movieCard-link:hover {
+    color: inherit;
+  }
+
+  .movieCard-info {
+    padding: 0.7rem;
+    text-align: left;
+  }
+
+  .movieCard-title {
+    background-color: transparent;
+    font-size: 0.6rem;
+    margin: 0;
+  }
+  
+  .movieCard-info p {
+    background-color: transparent;
+    color: #999;
+    font-size: 0.4rem;
+  }
+
+  .movieCard-favorite-btn {
+    background-color: rgba(0, 0, 0, 0.9);
+    top: 0.4rem;
+    width: 20px;
+    height: 20px;
+    font-size: 0.6rem;
+  }
+
+  .MovieCard-addToList-btn {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0.4rem;
+    right: 2rem;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    font-size: 0.9rem;
+  }
+  
+  .MovieCard-addToList-btn::after {
+    content: "";
+  }
+  
+  .movieCard:hover .movieCard-overlay {
+    opacity: 0.8;
+  }
+  
+}

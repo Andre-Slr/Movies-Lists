@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        const basePath = '/Movies-Lists';
+        const currentPath = window.location.pathname;
+
+        if (!currentPath.startsWith(basePath)) {
+            window.location.replace(basePath + '/');
+        }
+    </script>
+</head>
+<body>
+    Redirecting...
+</body>
+</html>

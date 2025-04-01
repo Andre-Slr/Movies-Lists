@@ -1,0 +1,89 @@
+
+.createListForm-content {
+    background-color: #171717;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.createListForm-content input {
+    background-color: #1c1c1c;
+    color: #fdfdfd;
+    border: none;
+    border-bottom: 1px solid #fdfdfd;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    font-size: larger;
+}
+
+.createListForm-content input:focus {
+    outline: none;
+}
+
+.list-description-input {
+    height: 100px;
+}
+
+.createListForm-content p {
+    background-color: #171717;
+    color: #fdfdfd;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.createListForm-buttons {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.create-list-button {
+    background-color: #e50914;
+    color: #fdfdfd;
+    border: none;
+    padding: 0.5rem;
+    margin: 0;
+    margin-top: 2rem;
+    width: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.create-list-button:hover {
+    background-color: #b3030b;
+}
+
+.create-list-button.no {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.create-list-button.no:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.delete-list-button {
+    background-color: #e50914;
+    color: #fdfdfd;
+    border: none;
+    padding: 0.5rem;
+    margin: 0;
+    margin-top: 2rem;
+    width: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.delete-list-button:hover {
+    background-color: #b3030b;
+}
+
+@media (max-width: 639px) {
+    .createListForm-content input {
+        font-size: large;
+    }
+}

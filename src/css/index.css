@@ -1,0 +1,105 @@
+/* Variables CSS */
+:root {
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --line-height: 1.5;
+  --font-weight: 300;
+  --color-light: rgba(255, 255, 255, 0.87);
+  --color-dark: #242424;
+  --link-color: #fff;
+  --link-hover-color: #fff;
+  --button-bg-color: #1a1a1a;
+  --button-hover-border-color: #646cff;
+  --focus-outline-color: -webkit-focus-ring-color;
+  --h1-font-size: 3.2em;
+  --h1-line-height: 1.1;
+  --button-padding: 0.6em 1.2em;
+  --button-border-radius: 8px;
+  --button-font-size: 1em;
+  --button-font-weight: 500;
+  --transition-duration: 0.25s;
+
+  color-scheme: dark;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  font-weight: 500;
+  color: var(--link-color);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--link-hover-color);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  line-height: var(--h1-line-height);
+}
+
+button {
+  border-radius: var(--button-border-radius);
+  border: 1px solid transparent;
+  padding: var(--button-padding);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  font-family: inherit;
+  background-color: var(--button-bg-color);
+  cursor: pointer;
+  transition: border-color var(--transition-duration);
+}
+button:hover {
+  border-color: none;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto var(--focus-outline-color);
+}
+
+/* Media Queries */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #ffffff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

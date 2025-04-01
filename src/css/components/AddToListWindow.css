@@ -1,0 +1,77 @@
+.addToListWindow-container {
+    background-color: transparent;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.addToListWindow-container h2{
+    background-color: #171717;
+    margin: 0;
+    padding: 1rem;
+    color: #fdfdfd;
+}
+
+.addToListWindow-header {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.createNewList-button {
+    background-color: #333;
+    border: none;
+    border-radius: 10px;
+    color: #fdfdfd;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+    margin: 0.2rem;
+    transition: all 0.3s;
+}
+
+.createNewList-button:hover {
+    background-color: #666;
+    transform:scale(1.1);
+    border: none;
+}
+
+.addToListWindow-buttons-grid {
+    background-color: #171717;
+    color: #fdfdfd;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.addToListWindow-add-btn {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 10px;
+    color: #fdfdfd;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    margin: 0.4rem;
+    transition: all 0.3s;
+}
+
+.addToListWindow-add-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    border: none;
+}
+
+.addToListWindow-add-btn.in-list {
+    background-color: #e50914;
+}
+
+.addToListWindow-add-btn.in-list:hover {
+    background-color: #b3030b;
+    transform: translateY(-5px);
+    border: none;
+}
