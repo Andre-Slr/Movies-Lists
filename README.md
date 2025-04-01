@@ -1,19 +1,11 @@
 # Movies List App
 
-Basic app to search for movies. You can create your lists or add movies to your favorites. Click on the movies to see details and click on the actors to see their cinematography and biography.
+Basic app to search for movies. You can create your lists or add movies to your favorites. Click on the movies to see details and click on the actors to see their cinematography and biography. It is responsive and works on mobile too. 
 
-## How to run locally
+The lists and favorites work on localStorage so be sure to use it on the same device.
 
-- Install [Node.js](https://nodejs.org/es) on your computer.
-- Create a new React application (make sure you select Vite when configurating).
-- Then, run `npm install` to make sure all the node_modules are installed correctly.
-- In the end, clone this repository in the same folder as you new project. Make sure you replace all the files that react made with the ones that the project installed.
-- You may need to install some other components like `react-router-dom`, just use `npm install react-router-dom`
-- And that's it! just run `npm run dev` on the same folder where the project is and click on the url that gives you, usually is `http://localhost:5173/`
+Initially I put some steps to run it locally but I figured out how to get it on Github Pages!
 
-## Important parts
-
-Don't forget to create an account at [TMDB´s](https://www.themoviedb.org/) to get you API_KEY and add it to your `.env` file as `VITE_API_KEY`
 
 ## References
 
