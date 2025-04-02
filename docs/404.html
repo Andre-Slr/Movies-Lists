@@ -5,7 +5,9 @@
         const basePath = '/Movies-Lists';
         const currentPath = window.location.pathname;
 
-        if (!currentPath.startsWith(basePath) || currentPath === basePath + '/404.html') {
+        if (!currentPath.startsWith(basePath) || currentPath.endsWith('/404.html')) {
+            window.location.replace(basePath + '/');
+        } else {
             window.location.replace(basePath + '/');
         }
     </script>
