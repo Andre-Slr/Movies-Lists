@@ -9,10 +9,6 @@ function MovieCard({ movie }) {
     const favorite = isFavorite(movie.id);
     const [isListWindowOpen, setIsListWindowOpen] = useState(false);
 
-    useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    }, []);
-
     function onFavoriteClick(e) {
         e.preventDefault();
         if (favorite) {
@@ -21,6 +17,7 @@ function MovieCard({ movie }) {
             addToFavorites(movie);
         }
     }
+    
 
     return (
         <div className="movieCard-container">
@@ -28,10 +25,12 @@ function MovieCard({ movie }) {
             <Link to={`/movie_details/${movie.id}`} className="movieCard-link">
                 <div className="movieCard">
                     <div className="movieCard-poster">
-                        <img
-                            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                            alt={movie.title}
-                        />
+                        { movie.poster_path 
+                            ? <img
+                                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                                alt={movie.title}/>
+                            : <img />
+                        }
                         <div className="movieCard-overlay">
                             <button
                                 className={`movieCard-favorite-btn`}

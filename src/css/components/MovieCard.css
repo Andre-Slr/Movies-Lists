@@ -124,12 +124,15 @@
   content: " Add to List";
 }
 
-@media (max-width: 768px) {
+@media (max-width: 550px) {
   .movieCard {
     font-size: 0.8rem;
     text-align: center;
     max-width: 120px;
   }
+}
+
+@media (max-width: 768px) {
   
   .movieCard-link {
     text-decoration: none;

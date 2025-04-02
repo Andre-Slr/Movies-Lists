@@ -2,6 +2,10 @@ import "../css/components/CastCard.css"
 import { Link } from "react-router-dom"
 
 function CastCard({actor}) {
+    if (!actor.profile_path) {
+        return null;
+    }
+
     return(
         <div key={actor.id} className="actor-container">
             <Link to={`/actor_details/${actor.id}`} className="actor-link">
