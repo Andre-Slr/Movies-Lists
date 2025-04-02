@@ -8,8 +8,7 @@
         if (!currentPath.startsWith(basePath) || currentPath.endsWith('/404.html')) {
             window.location.replace(basePath + '/');
         } else {
-            const newPath = basePath + '/index.html';
-            window.location.replace(newPath + '?' + encodeURIComponent(currentPath));
+            window.location.replace(currentPath);
         }
     </script>
 </head>
