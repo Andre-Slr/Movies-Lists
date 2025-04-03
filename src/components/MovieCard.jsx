@@ -9,6 +9,19 @@ function MovieCard({ movie }) {
     const favorite = isFavorite(movie.id);
     const [isListWindowOpen, setIsListWindowOpen] = useState(false);
 
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === "Escape") {
+                setIsListWindowOpen(false);
+            }
+        };
+        window.scrollTo({top: 0, behavior: "smooth"});
+        window.addEventListener("keydown", handleKeyDown);
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [])
+
     function onFavoriteClick(e) {
         e.preventDefault();
         if (favorite) {

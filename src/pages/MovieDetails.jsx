@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getMovieDetails, getMovieImages, getMovieCast, getSimilarMovies } from "../services/api";
+import { getMovieDetails, getMovieImages, getMovieTrailer, getMovieCast, getSimilarMovies } from "../services/api";
 import CastCard from "../components/CastCard";
 import MovieCard from "../components/MovieCard";
 import "../css/pages/MovieDetails.css";
@@ -18,6 +18,7 @@ function MovieDetails() {
   const [isListWindowOpen, setIsListWindowOpen] = useState(false);
   const [showMore, setShowMore] = useState(false)
   const [images, setImages] = useState(null)
+  const [trailer, setTrailer] = useState(null)
   const maxTextLength = 400
 
   useEffect(() => {
@@ -40,6 +41,17 @@ function MovieDetails() {
       }
     };
 
+    const fetchMovieTrailer = async () => {
+      try {
+        const trailerData = await getMovieTrailer(id);
+        setTrailer(trailerData);
+      } catch (error) {
+        console.log(error);
+        setTrailer(null);
+      }
+    }
+
+    fetchMovieTrailer();
     fetchMovieDetails();
   }, [id]);
 
@@ -98,6 +110,19 @@ function MovieDetails() {
           </p>
           { movie.overview.length > maxTextLength && (
               <p className="showMore-btn" onClick={() => setShowMore(!showMore)}>{showMore ? "Show less" : "Show more"}</p>
+          )}
+          
+          {trailer && (
+            <iframe
+              title={trailer.name}
+              width="380"
+              height="240"
+              src={`https://www.youtube.com/embed/${trailer.key}`}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="movieDetails-trailer"
+            />
           )}
         </div>
       </div>

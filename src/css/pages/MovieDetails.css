@@ -114,6 +114,13 @@
     font-weight: 300;
 }
 
+.movieDetails-trailer {
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-weight: 200;
+    border-radius: 10px;
+}
+
 .cast-background {
     background: linear-gradient(
         to top,
@@ -171,6 +178,10 @@
 
     .movieDetails-overview {
         font-size: 1rem;
+    }
+    
+    .movieDetails-trailer {
+        margin: auto;
     }
     
     .movieDetails-cast {
