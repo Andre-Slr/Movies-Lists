@@ -118,8 +118,7 @@ function MovieDetails() {
               width="380"
               height="240"
               src={`https://www.youtube.com/embed/${trailer.key}`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="autoplay; encrypted-media;"
               allowFullScreen
               className="movieDetails-trailer"
             />
