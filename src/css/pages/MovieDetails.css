@@ -180,6 +180,7 @@
     
     .movieDetails-trailer {
         margin: auto;
+        width: 300px;
     }
     
     .movieDetails-cast {
