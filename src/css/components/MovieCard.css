@@ -14,16 +14,16 @@
 .movieCard {
   position: relative;
   max-width: 300px;
-  border-radius: 20px;
   overflow: hidden;
-  transition: transform 0.2s;
+  transition: transform 0.4s;
   height: adjust-content;
   display: flex;
   flex-direction: column;
 }
 
 .movieCard:hover {
-  transform: translateY(-5px);
+  transform: rotate(0.4deg) scale(1.05);
+  cursor: pointer;
 }
 
 .movieCard-poster {
@@ -36,6 +36,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .movieCard-overlay {
@@ -49,6 +50,7 @@
     rgba(0, 0, 0, 0.1),
     rgba(0, 0, 0, 0.8)
   );
+  border-radius: 5px;
   opacity: 0;
   transition: opacity 0.2s;
   display: flex;
@@ -82,12 +84,8 @@
 }
 
 .movieCard-info {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.5)
-  );
-  padding: 1rem;
+  background: transparent;
+  padding: 0.4rem 0.2rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -127,7 +125,6 @@
 @media (max-width: 550px) {
   .movieCard {
     font-size: 0.8rem;
-    text-align: center;
     max-width: 120px;
   }
 }
@@ -143,21 +140,20 @@
     color: inherit;
   }
 
-  .movieCard-info {
-    padding: 0.7rem;
-    text-align: left;
+  .movieCard-poster img {
+    border-radius: 10px;
   }
 
   .movieCard-title {
     background-color: transparent;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     margin: 0;
   }
   
   .movieCard-info p {
     background-color: transparent;
     color: #999;
-    font-size: 0.4rem;
+    font-size: 0.5rem;
   }
 
   .movieCard-favorite-btn {

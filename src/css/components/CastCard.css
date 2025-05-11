@@ -6,10 +6,12 @@
     height:fit-content;
     display: flex;
     flex-direction: column;
+    transition: transform 0.4s;
 }
 
 .actor-container:hover {
-    transform: translateY(-5px);
+    transform: rotate(-0.7deg) scale(1.05);
+    cursor: pointer;
 }
 
 .actor-link {

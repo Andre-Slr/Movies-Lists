@@ -21,8 +21,8 @@
 }
 
 .brand-link:hover {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: #ccc;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .navbar-links {
@@ -41,8 +41,8 @@
 }
 
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ccc;
 }
 
 @media (max-width: 768px) {
